@@ -1,0 +1,4 @@
+Required Jenkins plugins:
+Docker
+Docker Pipeline
+ssh agent
