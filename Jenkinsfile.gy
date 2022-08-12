@@ -1,0 +1,33 @@
+pipeline {
+    agent any
+ stages {
+  stage('Docker Build and Tag') {
+           steps {
+                sh 'docker build -t jenkins-proj/ubuntu-webserver:latest .'
+                sh 'docker tag jenkins-proj/ubuntu-webserver tridevg/ver1'
+          }
+        }
+  stage('Publish image to Docker Hub') {
+            steps {
+        withDockerRegistry([ credentialsId: "dockerhub", url: "" ]) {
+          sh  'docker push tridevg/ver1'
+        }
+          }
+        }
+  stage('Deploy on K8s') {
+    steps {
+      sshagent(['k8s']) {
+        sh "scp -o ScriptHostKeyChecking=no nodejsapp.yaml root@k8s-targetip:/root"
+      script {
+        try {
+           sh "ssh root@k8s-targetsameaboveip kubectl apply -f ."
+        }catch(error) {
+           sh "ssh root@k8s-targetsameaboveip kubectl apply -f ."
+        }
+      }
+      }
+    }
+  }
+        
+  }
+}
