@@ -4,7 +4,7 @@
 -  run bootstrap.sh while launching aws ec2 instance
 -  run jenkins.sh
 -  run k8s.sh , manually run commented lines, verify if k8s cluster is ready with $ kubectl get nodes
--  create and run a fake PIPELINE job to create workspace, and copy dockerfile and app.yaml contents to the pipeline project workspace
+-  create and run a fake PIPELINE job to create workspace(jenkinsfile.gy goes to job as groovy script), and copy dockerfile and app.yaml contents to the pipeline project workspace
 -  jenkins plugins: docker, docker pipeline, ssh agent, kubernetes
 
 -  add dockerhub credential to jenkins (global cred) with username and password(dockerhub token)
