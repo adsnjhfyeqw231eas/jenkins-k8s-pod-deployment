@@ -22,10 +22,12 @@ sleep 2
 swapoff -a
 sleep 2
 free -mh
-
+sleep 2
 
 # run on server only
-# kubeadm init --pod-network-cidr=10.244.0.0/16
-# export KUBECONFIG=/etc/kubernetes/admin.conf
-# kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
-
+kubeadm init --pod-network-cidr=10.244.0.0/16
+sleep 5
+export KUBECONFIG=/etc/kubernetes/admin.conf
+sleep 1
+kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+sleep 3
