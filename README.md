@@ -1,7 +1,7 @@
 # sys req: single instance, t2.large (2 CPUs, 8 GB RAM) on AWS
 
 # steps:
--  run bootstrap.sh
+-  run bootstrap.sh while launching aws ec2 instance
 -  run jenkins.sh
 -  run k8s.sh
 -  create and run a fake PIPELINE job to create workspace, and copy dockerfile and app.yaml contents to the pipeline project workspace
