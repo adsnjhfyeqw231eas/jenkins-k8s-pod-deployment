@@ -6,8 +6,8 @@ make entry to /etc/sudoers:
 jenkins ALL=(ALL) ALL
 
 jenkins plugins:
-docker 
-docker pipeline
+docker, 
+docker pipeline,
 ssh agent
 
 
