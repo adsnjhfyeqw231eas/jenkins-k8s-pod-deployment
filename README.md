@@ -16,3 +16,4 @@ jenkins ALL=(ALL) ALL
 
 - and add if you are running k8s on a seprate server then , add aws provided .pem file contents to Jenkins global cred as secret text. id must be k8s as it is in use in jenkinsfile.gy
 
+- Finally run the job
