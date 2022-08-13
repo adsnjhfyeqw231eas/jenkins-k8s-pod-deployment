@@ -1,3 +1,4 @@
+sys req: t2.large (2 CPUs, 8 GB RAM) on AWS
 steps:
 -  run bootstrap.sh
 -  run jenkins.sh
