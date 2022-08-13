@@ -1,4 +1,4 @@
-# sys req: single instance, t2.large (2 CPUs, 8 GB RAM) on AWS
+# sys req: single instance - ubuntu 20 LTS, t2.large (2 CPUs, 8 GB RAM) on AWS
 
 # steps:
 -  run bootstrap.sh while launching aws ec2 instance
@@ -9,7 +9,7 @@
 
 -  add dockerhub credential to jenkins (global cred) with username and password(dockerhub token)
 
--  to avoid error "jenkisn pipeline error: Please login as the user "ubuntu" rather than the user "root".
+-  to avoid error "jenkins pipeline error: Please login as the user "ubuntu" rather than the user "root".
 make entry to /etc/sudoers: 
 $ sudo visudo
 jenkins ALL=(ALL) ALL
