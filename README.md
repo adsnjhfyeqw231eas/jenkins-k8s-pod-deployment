@@ -2,11 +2,8 @@ steps:
 -  run bootstrap.sh
 -  run jenkins.sh
 -  run k8s.sh
--  run a fake job to create workspace, and copy dockerfile and app.yaml to pipeline workspace
--  jenkins plugins:
-docker, 
-docker pipeline,
-ssh agent
+-  create and run a fake PIPELINE job to create workspace, and copy dockerfile and app.yaml contents to the pipeline project workspace
+-  jenkins plugins: docker, docker pipeline, ssh agent, kubernetes
 
 -  add dockerhub credential to jenkins (global cred) with username and password(dockerhub token)
 
