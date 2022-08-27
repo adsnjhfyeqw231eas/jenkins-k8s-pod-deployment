@@ -4,7 +4,7 @@
 -  run bootstrap.sh while launching aws ec2 instance
 -  run jenkins.sh
 -  run k8s.sh , manually run commented lines, verify if k8s cluster is ready with $ kubectl get nodes
--  jenkins plugins: kubernetes
+-  jenkins plugins: kubernetes, ssh-agent
 -  create and run a fake PIPELINE job to create workspace(jenkinsfile.gy goes to job as groovy script), and copy app.yaml to the pipeline project workspace
 -  to avoid error "jenkins pipeline error: Please login as the user "ubuntu" rather than the user "root".
 make entry to /etc/sudoers: 
