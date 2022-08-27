@@ -11,7 +11,7 @@ make entry to /etc/sudoers:
 \$ sudo visudo ->  
 jenkins ALL=(ALL) ALL
 
-- and add if you are running k8s on a seprate server then , then setup cloud/manage nodes and cloud
+- and add if you are running k8s on a seprate server then , then setup cloud/manage nodes and cloud and manually install only kubectl in jenkins instance ( no need to join k8s cluster)
 
 - Finally run the job
 
