@@ -12,7 +12,7 @@ spec:
       labels:
         app: myapache
     spec:
-      nodeName: <nodename>
+      nodeName: k8s
       containers:
       - name: myapache
         image: httpd
