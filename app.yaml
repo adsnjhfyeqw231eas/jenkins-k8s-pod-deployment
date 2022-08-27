@@ -12,6 +12,7 @@ spec:
       labels:
         app: myapache
     spec:
+      nodeName: <nodename>
       containers:
       - name: myapache
         image: httpd
