@@ -10,8 +10,8 @@ apt update -y
 sleep 2
 apt install jenkins -y
 sleep 3
-setfacl -m jenkins:rwx /var/run/docker.sock && getfacl /var/run/docker.sock
-sleep 1
+#setfacl -m jenkins:rwx /var/run/docker.sock && getfacl /var/run/docker.sock
+#sleep 1
 which docker
 which jenkins
 which git
