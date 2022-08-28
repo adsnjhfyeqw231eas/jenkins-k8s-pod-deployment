@@ -1,4 +1,4 @@
-# sys req: single instance - ubuntu 20 LTS, t2.medium on AWS
+# sys req: launch 2 instance - ubuntu 20 LTS, t2.medium on AWS
 
 # steps:
 -  run bootstrap.sh while launching aws ec2 instance
