@@ -35,4 +35,4 @@ chown $(id -u):$(id -g) $HOME/.kube/config
 sleep 2
 kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
 sleep 3
-ls /.kube/config
+ls .kube/config
