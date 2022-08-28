@@ -27,7 +27,12 @@ sleep 2
 # run on server only
 kubeadm init --pod-network-cidr=10.244.0.0/16
 sleep 5
-export KUBECONFIG=/etc/kubernetes/admin.conf
-sleep 1
+mkdir -p $HOME/.kube
+sleep 2
+cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+sleep 2
+chown $(id -u):$(id -g) $HOME/.kube/config
+sleep 2
 kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
 sleep 3
+ls /.kube/config
