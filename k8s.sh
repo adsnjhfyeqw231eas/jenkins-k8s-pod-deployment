@@ -1,6 +1,5 @@
 #!/bin/bash
-apt -y update
-#!/bin/bash
+sudo apt update -y
 sudo apt -y upgrade
 sudo apt install docker.io apt-transport-https curl -y
 sudo systemctl restart docker
